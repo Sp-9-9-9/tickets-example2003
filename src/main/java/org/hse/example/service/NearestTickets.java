@@ -25,7 +25,7 @@ public class NearestTickets implements TicketService {
         if (digitsQnty <= 0 || digitsQnty % 2 != 0) {
             throw new IllegalArgumentException("Передан некорректный параметр! " + digitsQnty);
         }
-        // Заполняем атрибуты
+        // Заполняем атрибуты создаваемого объекта
         this.maxNumber = (int) (Math.pow(10, digitsQnty) - 1);
         this.digits = new int[digitsQnty];
         this.distance = this.maxNumber;
